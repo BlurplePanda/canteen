@@ -1,0 +1,154 @@
+/** {
+    color: #27829e;
+    background-color: white;
+}*/
+
+/* sets defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin: 50px 10px 30px;
+    text-align: center;
+}
+
+h3 {
+    margin: 35px 10px 10px;
+    color: #9aa4b6;
+}
+
+/* makes the header have set height and colour */
+header {
+    background-color: #27829e;
+    height: 120px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+p {
+    margin: 15px 10px;
+}
+
+/* sets format for images, including rounding corners */
+img {
+    vertical-align: middle;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* gives only the images in main a shadow around them */
+main img {
+    box-shadow: 0px 0px 3px 5px #DCE1f3;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
+}
+
+/* sets main (not header/footer/etc) to be less wide than the page and centred in the page */
+main {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+}
+
+a {
+    color: #9aa4b6;
+}
+
+a:hover {
+    color: #dce1f3;
+}
+
+/* makes "button" links buttons */
+a.button {
+    text-decoration: none;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #40587a;
+}
+
+a.button:hover {
+    background-color: #D4C9CF;
+}
+
+a:active {
+    color: #9AA4B6;
+}
+
+/* sets the styling for the button link for the current page*/
+#current {
+    background-color: #9AA4B6;
+    font-size: 110%;
+    color: white;
+}
+
+/*.img-link {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}*/
+
+nav {
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #dcdcda;
+}
+
+td {
+    padding: 20px 10px;
+}
+
+/* sets height and colour etc for footer */
+footer {
+    background-color: #edd9ce;
+    margin-top: 40px;
+    height: 50px;
+}
+/*
+.justify-right {
+    text-align: right;
+    margin-right: 10px;
+}
+
+iframe {
+    border: 0;
+    margin: 0 auto;
+    display: block;
+}*/
