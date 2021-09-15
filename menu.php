@@ -30,7 +30,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
 
 <main>
     <h2> All Items</h2>
-    <form name='sort_form' id='sortby' method='post'>
+    <form name='sort_form' id='sort_form' method='post'>
         <label for='sortby'> Sort by: </label>
         <select id='sortby' name='sortby'>
             <!--options-->
@@ -63,7 +63,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
 
     <!--search-->
     <h2> Search an item </h2>
-    <form action='' method='post'>
+    <form action='menu.php' method='post'>
         <input type='text' name='search'>
         <input type='submit' name='submit' value='Search'>
     </form>
