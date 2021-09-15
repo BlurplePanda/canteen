@@ -20,9 +20,9 @@ $specials_result = mysqli_query($con, $specials_query);
 <header>
     <img src='images/wgclogotext.png' alt='WGC logo' class='center'>
     <nav>
-        <a href='index.php' class='button'> Home </a></li>
-        <a href='menu.php' class='button'> Menu </a></li>
-        <a href='specials.php' class='button' id='current'> Specials </a></li>
+        <a href='index.php' class='button'> Home </a>
+        <a href='menu.php' class='button'> Menu </a>
+        <a href='specials.php' class='button' id='current'> Specials </a>
 
     </nav>
 </header>
