@@ -19,7 +19,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
 <body>
 
 <header>
-    <img src='images/wgclogotext.png' class='center'>
+    <img src='images/wgclogotext.png' alt='WGC logo' class='center'>
     <nav>
         <a href='index.php' class='button'> Home </a></li>
         <a href='menu.php' class='button' id='current'> Menu </a></li>

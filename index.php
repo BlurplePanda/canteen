@@ -15,7 +15,7 @@ if(mysqli_connect_errno()){
 
    <body>
       <header>
-          <img src='images/wgclogotext.png' class='center'>
+          <img src='images/wgclogotext.png' alt='WGC logo' class='center'>
           <nav>
               <a href='index.php' class='button' id='current'> Home </a></li>
               <a href='menu.php' class='button'> Menu </a></li>
