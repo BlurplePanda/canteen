@@ -2,15 +2,11 @@
 $con = mysqli_connect("localhost", "bootham", "richpatch76", "bootham_canteen");
 if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:".mysqli_connect_error(); die();}
-else{
-    echo "connected to database";
-}
-
 
 $specials_query = "SELECT weekDay, items.itemID, itemName FROM specials, items WHERE specials.itemID = items.itemID";
 $specials_result = mysqli_query($con, $specials_query);
 
-?>
+?><!DOCTYPE html>
 
 <html lang='en'>
 
