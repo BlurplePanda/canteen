@@ -28,6 +28,7 @@ $specials_result = mysqli_query($con, $specials_query);
 </header>
 
 <main>
+    <h1>Specials</h1>
     <?php
     while($specials_record = mysqli_fetch_assoc($specials_result)){
         echo "<p>".$specials_record['weekDay'].": ";
