@@ -29,6 +29,32 @@ $all_items_result = mysqli_query($con, $all_items_query);
 </header>
 
 <main>
+    <!--search-->
+    <h2> Search an item </h2>
+    <form action='menu.php' method='post'>
+        <input type='text' name='search'>
+        <input type='submit' name='submit' value='Search'>
+    </form>
+
+    <?php
+    if(isset($_POST['search'])) {
+        $search = $_POST['search'];
+        $query1 = "SELECT * FROM items WHERE itemName LIKE '%$search%'";
+        $query = mysqli_query($con, $query1);
+        $count = mysqli_num_rows($query);
+
+        if($count==0) {
+            echo "There were no search results!";
+        }
+        else {
+            while($row = mysqli_fetch_array($query)) {
+                echo $row ['itemName'];
+                echo "<br>";
+            }
+        }
+    }
+    ?>
+
     <h2> All Items</h2>
     <form name='sort_form' id='sort_form' method='post'>
         <label for='sortby'> Sort by: </label>
@@ -59,33 +85,6 @@ $all_items_result = mysqli_query($con, $all_items_query);
     }
     ?>
 
-
-
-    <!--search-->
-    <h2> Search an item </h2>
-    <form action='menu.php' method='post'>
-        <input type='text' name='search'>
-        <input type='submit' name='submit' value='Search'>
-    </form>
-
-    <?php
-    if(isset($_POST['search'])) {
-        $search = $_POST['search'];
-        $query1 = "SELECT * FROM items WHERE itemName LIKE '%$search%'";
-        $query = mysqli_query($con, $query1);
-        $count = mysqli_num_rows($query);
-
-        if($count==0) {
-            echo "There were no search results!";
-        }
-        else {
-            while($row = mysqli_fetch_array($query)) {
-                echo $row ['itemName'];
-                echo "<br>";
-            }
-        }
-    }
-    ?>
 
 </main>
 </body>
