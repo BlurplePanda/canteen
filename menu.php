@@ -66,7 +66,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
             <option value='itemPrice DESC'>Price (high to low)</option>
         </select>
 
-        <input type='submit' value='Sort'>
+        <input type='submit' value='Click to sort'>
     </form>
     <?php
 
