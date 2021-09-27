@@ -60,8 +60,10 @@ $all_items_result = mysqli_query($con, $all_items_query);
         <label for='sortby'> Sort by: </label>
         <select id='sortby' name='sortby'>
             <!--options-->
-            <option value='itemName'>Name</option>
-            <option value='itemPrice'>Price</option>
+            <option value='itemName ASC'>Name (A-Z)</option>
+            <option value='itemName DESC'>Name (Z-A)</option>
+            <option value='itemPrice ASC'>Price (low to high)</option>
+            <option value='itemPrice DESC'>Price (high to low)</option>
         </select>
 
         <input type='submit' value='Sort'>
@@ -72,7 +74,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
         $sort_by = $_POST['sortby'];
     }
     else{
-        $sort_by = 'itemName';
+        $sort_by = 'itemName ASC';
     }
 
     $sort_items_query = "SELECT itemID, itemName, itemPrice FROM items ORDER BY ".$sort_by;
