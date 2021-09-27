@@ -29,6 +29,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
 </header>
 
 <main>
+    <h1>Menu</h1>
     <!--search-->
     <h2> Search an item </h2>
     <form action='menu.php' method='post'>
