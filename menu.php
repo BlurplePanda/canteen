@@ -30,29 +30,59 @@ $all_items_result = mysqli_query($con, $all_items_query);
 
 <main>
     <h1>Menu</h1>
-    <!--search-->
-    <h2> Search an item </h2>
+    <!--name/phrase search-->
+    <h2> Search </h2>
     <form action='menu.php' method='post'>
         <input type='text' name='search'>
-        <input type='submit' name='submit' value='Search'>
+        <input type='submit' name='submit' value='Search by name'>
     </form>
-
+    <br>
     <?php
     if(isset($_POST['search'])) {
         $search = $_POST['search'];
-        $query1 = "SELECT * FROM items WHERE itemName LIKE '%$search%'";
-        $query = mysqli_query($con, $query1);
-        $count = mysqli_num_rows($query);
+        $search_query = "SELECT * FROM items WHERE itemName LIKE '%$search%'";
+        $search_result = mysqli_query($con, $search_query);
+        $count = mysqli_num_rows($search_result);
 
         if($count==0) {
-            echo "There were no search results!";
+            echo "There were no search results!<br>";
         }
         else {
-            while($row = mysqli_fetch_array($query)) {
-                echo $row ['itemName'];
+            while($row = mysqli_fetch_array($search_result)) {
+                echo "<a href='item.php?id=".$row['itemID']."'>".$row ['itemName']."</a>";
                 echo "<br>";
             }
         }
+    }
+    ?><br>
+    <form name='category_form' id='category_form' method='post'>
+        <select id='category' name='category'>
+            <!--options-->
+            <option value='SV'>Savoury</option>
+            <option value='SW'>Sweet</option>
+            <option value='CD'>Cold drinks</option>
+            <option value='HD'>Hot drinks</option>
+            <option value='FT'>Fruit</option>
+        </select>
+
+        <input type='submit' value='View items in category'>
+    </form>
+    <br>
+    <?php
+    if(isset($_POST['category'])) {
+        $type_query = "SELECT * FROM items WHERE typeID = '".$_POST['category']."'";
+        $type_result = mysqli_query($con, $type_query);
+        $type_item_count = mysqli_num_rows($type_result);
+        if($type_item_count==0) {
+            echo "There were no search results!";
+        }
+        else {
+            while($type_record = mysqli_fetch_array($type_result)) {
+                echo "<a href='item.php?id=".$type_record['itemID']."'>".$type_record ['itemName']."</a>";
+                echo "<br>";
+            }
+        }
+
     }
     ?>
 
