@@ -30,8 +30,8 @@ $all_items_result = mysqli_query($con, $all_items_query);
 
 <main>
     <h1>Menu</h1>
-    <!--name/phrase search-->
     <h2> Search </h2>
+    <!--name/phrase search-->
     <form action='menu.php' method='post'>
         <input type='text' name='search'>
         <input type='submit' name='submit' value='Search by name'>
@@ -55,6 +55,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
         }
     }
     ?><br>
+    <!--item type search-->
     <form name='category_form' id='category_form' method='post'>
         <select id='category' name='category'>
             <!--options-->
@@ -114,7 +115,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
     while($sort_items_record = mysqli_fetch_assoc($sort_items_result)) {
         echo "<p><a href='item.php?id=".$sort_items_record['itemID']."'>" . $sort_items_record['itemName'] . " ";
         echo $sort_items_record['itemPrice'];
-        echo "</a>";
+        echo "</a>\n";
     }
     ?>
 
