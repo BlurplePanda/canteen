@@ -33,9 +33,10 @@ h3 {
 /* makes the header have set height and colour */
 header {
     background-color: #27829e;
-    height: 120px;
+    height: 145px;
     padding-top:10px;
     padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -73,7 +74,7 @@ main img {
 
 /* sets main (not header/footer/etc) to be less wide than the page and centred in the page */
 main {
-    width: 75%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
