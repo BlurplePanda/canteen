@@ -55,6 +55,12 @@ main img {
     box-shadow: 0px 0px 3px 5px #DCE1f3;
 }
 
+.itemimage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
 .center {
     display: block;
     margin-left: auto;
