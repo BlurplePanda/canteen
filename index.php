@@ -25,7 +25,7 @@ if(mysqli_connect_errno()){
       </header>
 
       <main>
-          <h2>Welcome to Wellington Girls' College Canteen!</h2>
+          <h1>Welcome to Wellington Girls' College Canteen!</h1>
           <p>Here at Wellington Girls' College we strive to provide healthy yet tasty food for all the students.
               We offer a variety of food and drinks all for reasonable prices. Head to our <a href='menu.php'>menu page</a> to check out
               the products!</p>
