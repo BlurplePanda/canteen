@@ -50,21 +50,18 @@ img {
     border-radius: 5px;
 }
 
-/* gives only the images in main a shadow around them */
-main img {
-    box-shadow: 0px 0px 3px 5px #DCE1f3;
-}
-
 .searchitemimage {
     width: 30px;
     height: 30px;
     object-fit: cover;
 }
 
+/* formats only the images in the all items list (size, shadow) */
 .allitemsimage {
     width: 100px;
     height: 100px;
     object-fit: cover;
+    box-shadow: 0px 0px 5px 5px #49a4c0;
 }
 
 .center {
