@@ -59,11 +59,11 @@ $all_items_result = mysqli_query($con, $all_items_query);
     <form name='category_form' id='category_form' method='post'>
         <select id='category' name='category'>
             <!--options-->
-            <option value='SV'>Savoury</option>
-            <option value='SW'>Sweet</option>
-            <option value='CD'>Cold drinks</option>
-            <option value='HD'>Hot drinks</option>
-            <option value='FT'>Fruit</option>
+            <option <?php if(isset($_POST['category']) && $_POST['category']=='SV'){echo "selected ";}?>value='SV'>Savoury</option>
+            <option <?php if(isset($_POST['category']) && $_POST['category']=='SW'){echo "selected ";}?>value='SW'>Sweet</option>
+            <option <?php if(isset($_POST['category']) && $_POST['category']=='CD'){echo "selected ";}?>value='CD'>Cold drinks</option>
+            <option <?php if(isset($_POST['category']) && $_POST['category']=='HD'){echo "selected ";}?>value='HD'>Hot drinks</option>
+            <option <?php if(isset($_POST['category']) && $_POST['category']=='FT'){echo "selected ";}?>value='FT'>Fruit</option>
         </select>
 
         <input type='submit' value='View items in category'>
@@ -92,10 +92,10 @@ $all_items_result = mysqli_query($con, $all_items_query);
         <label for='sortby'> Sort by: </label>
         <select id='sortby' name='sortby'>
             <!--options-->
-            <option value='itemName ASC'>Name (A-Z)</option>
-            <option value='itemName DESC'>Name (Z-A)</option>
-            <option value='itemPrice ASC'>Price (low to high)</option>
-            <option value='itemPrice DESC'>Price (high to low)</option>
+            <option <?php if(isset($_POST['sortby']) && $_POST['sortby']=='itemName ASC'){echo "selected ";}?>value='itemName ASC'>Name (A-Z)</option>
+            <option <?php if(isset($_POST['sortby']) && $_POST['sortby']=='itemName DESC'){echo "selected ";}?>value='itemName DESC'>Name (Z-A)</option>
+            <option <?php if(isset($_POST['sortby']) && $_POST['sortby']=='itemPrice ASC'){echo "selected ";}?>value='itemPrice ASC'>Price (low to high)</option>
+            <option <?php if(isset($_POST['sortby']) && $_POST['sortby']=='itemPrice DESC'){echo "selected ";}?>value='itemPrice DESC'>Price (high to low)</option>
         </select>
 
         <input type='submit' value='Click to sort'>
@@ -109,11 +109,11 @@ $all_items_result = mysqli_query($con, $all_items_query);
         $sort_by = 'itemName ASC';
     }
 
-    $sort_items_query = "SELECT itemID, itemName, itemPrice FROM items ORDER BY ".$sort_by;
+    $sort_items_query = "SELECT * FROM items ORDER BY ".$sort_by;
     $sort_items_result = mysqli_query($con, $sort_items_query);
 
     while($sort_items_record = mysqli_fetch_assoc($sort_items_result)) {
-        echo "<p><a href='item.php?id=".$sort_items_record['itemID']."'>" . $sort_items_record['itemName'] . " ";
+        echo "<p><a href='item.php?id=".$sort_items_record['itemID']."'><img src='images/".$sort_items_record['itemImageName']."' class='itemimage'>" . $sort_items_record['itemName'] . " ";
         echo $sort_items_record['itemPrice'];
         echo "</a>\n";
     }
