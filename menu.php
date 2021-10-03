@@ -42,7 +42,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
     <?php
     if(isset($_POST['search'])) {
         $search = $_POST['search'];
-        $search_query = "SELECT * FROM items WHERE itemName LIKE '%$search%'";
+        $search_query = "SELECT * FROM items WHERE itemName LIKE '%$search%' ORDER BY itemName";
         $search_result = mysqli_query($con, $search_query);
         $count = mysqli_num_rows($search_result);
 
@@ -74,7 +74,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
     <br>
     <?php
     if(isset($_POST['category'])) {
-        $type_query = "SELECT * FROM items WHERE typeID = '".$_POST['category']."'";
+        $type_query = "SELECT * FROM items WHERE typeID = '".$_POST['category']."' ORDER BY itemName";
         $type_result = mysqli_query($con, $type_query);
         $type_item_count = mysqli_num_rows($type_result);
         if($type_item_count==0) {
