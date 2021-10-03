@@ -98,7 +98,7 @@ li {
 }
 
 a {
-    color: #27829e;
+    color: #177ca7;
 }
 
 a:hover {
@@ -123,9 +123,9 @@ a:active {
     color: #27829e;
 }
 
-/* sets the styling for the button link for the current page*/
+/* sets the styling for the button link for the current page 26809d*/
 #current {
-    background-color: #49a4c0;
+    background-color: #177ca7;
     font-size: 110%;
     color: white;
 }
