@@ -29,7 +29,7 @@ if(mysqli_connect_errno()){
           <p>Here at Wellington Girls' College we strive to provide healthy yet tasty food for all the students.
               We offer a variety of food and drinks all for reasonable prices. Head to our <a href='menu.php'>menu page</a> to check out
               the products!</p>
-          <img src='images/canteentuckshopimage.jpg' alt='Students queuing at a school canteen' width=100%>
+          <img id='home-page-image' src='images/canteentuckshopimage.jpg' alt='Students queuing at a school canteen'>
 
 
 

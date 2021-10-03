@@ -188,6 +188,10 @@ form {
     margin-right: auto;
 }
 
+#home-page-image {
+    width: 100%;
+}
+
 /* sets height and colour etc for footer */
 /*footer {
     background-color: #dedede;
