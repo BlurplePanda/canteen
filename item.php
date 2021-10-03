@@ -27,6 +27,7 @@ if(mysqli_connect_errno()){
 <main>
     <h1> Item Information </h1>
 
+    <div class='item-info'>
     <?php
 
     if(isset($_GET['id'])){
@@ -34,18 +35,19 @@ if(mysqli_connect_errno()){
         $this_item_query = "SELECT items.*, typeName FROM items, itemtypes WHERE itemID = '".$id."' AND items.typeID = itemtypes.typeID";
         $this_item_result = mysqli_query($con, $this_item_query);
         $this_item_record = mysqli_fetch_assoc($this_item_result);
-        echo "<img src='images/".$this_item_record['itemImageName']."' class='singleitemimg' alt=''>";
-        echo "<p>Item Name: ".$this_item_record['itemName'];
-        echo "<p>Item description: ".$this_item_record['itemDescription'];
-        echo "<p>Type: ".$this_item_record['typeName'];
-        echo "<p>Cost: $".$this_item_record['itemPrice'];
-        echo "<p>Availability: ";
+        echo "<div class='itemimage'><img src='images/".$this_item_record['itemImageName']."' class='singleitemimg' alt=''></div>";
+        echo "<div class='itemtext'><p class='itemtext'>Item Name: ".$this_item_record['itemName'];
+        echo "<p class='itemtext'>Item description: ".$this_item_record['itemDescription'];
+        echo "<p class='itemtext'>Type: ".$this_item_record['typeName'];
+        echo "<p class='itemtext'>Cost: $".$this_item_record['itemPrice'];
+        echo "<p class='itemtext'>Availability: ";
         if($this_item_record['itemInStock']==1){
             echo "In stock!";
         }
         else{
             echo "Not in stock, sorry :(";
         }
+        echo "</div>";
 
     }
 
@@ -54,7 +56,7 @@ if(mysqli_connect_errno()){
     }
 
 
-    ?>
+    ?></div>
 
     <p><a href="<?php echo $_GET['fromurl']?>">Back to previous page</a>
 
