@@ -120,7 +120,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
 
     while($sort_items_record = mysqli_fetch_assoc($sort_items_result)) {
         echo "<div class='item'>";
-        echo "<p><a href='item.php?id=".$sort_items_record['itemID']."&fromurl=".$_SERVER['REQUEST_URI']."'><img src='images/".$sort_items_record['itemImageName']."' alt='' class='allitemsimage' class='center'><br>" . $sort_items_record['itemName'] . " ";
+        echo "<p><a href='item.php?id=".$sort_items_record['itemID']."&fromurl=".$_SERVER['REQUEST_URI']."'><img src='images/".$sort_items_record['itemImageName']."' alt='' class='allitemsimage'><br>" . $sort_items_record['itemName'] . " ";
         echo $sort_items_record['itemPrice'];
         echo "</a></div>\n";
     }
