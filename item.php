@@ -25,7 +25,7 @@ if(mysqli_connect_errno()){
 </header>
 
 <main>
-    <h2> Item Information </h2>
+    <h1> Item Information </h1>
 
     <?php
 
