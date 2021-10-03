@@ -47,20 +47,24 @@ img {
     vertical-align: middle;
     margin: 10px;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .searchitemimage {
     width: 30px;
     height: 30px;
-    object-fit: cover;
 }
 
 /* formats only the images in the all items list (size, shadow) */
 .allitemsimage {
     width: 100px;
     height: 100px;
-    object-fit: cover;
     box-shadow: 0px 0px 5px 5px #49a4c0;
+}
+
+.singleitemimg {
+    width: 250px;
+    height: 250px;
 }
 
 .center {
