@@ -31,7 +31,8 @@ $all_items_result = mysqli_query($con, $all_items_query);
 <main>
     <h1>Menu</h1>
     <h2> Search </h2>
-    <table><tr><td>
+    <div class='searches'>
+    <div class='search'>
     <!--name/phrase search-->
     <form action='menu.php' method='post'>
         <label for='search'> Search by name </label><br>
@@ -56,7 +57,8 @@ $all_items_result = mysqli_query($con, $all_items_query);
             }
         }
     }
-    ?></td><td>
+    ?></div>
+    <div class='search'>
     <!--item type search-->
     <form name='category_form' id='category_form' method='post'>
         <label for='category'> Search by category </label><br>
@@ -88,7 +90,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
         }
 
     }
-    ?></td></tr></table>
+    ?></div></div>
 
     <h2> All Items</h2>
     <form name='sort_form' id='sort_form' method='post'>

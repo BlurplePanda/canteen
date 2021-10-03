@@ -74,14 +74,13 @@ img {
     margin-top: 0;
 }
 
-.float-left {
-    float: left;
-    margin-right: 20px;
+.searches {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-.float-right {
-    float: right;
-    margin-left: 20px;
+.search {
+    text-align: center;
 }
 
 /* sets main (not header/footer/etc) to be less wide than the page and centred in the page */
