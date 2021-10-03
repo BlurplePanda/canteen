@@ -25,10 +25,6 @@ h2 {
     text-align: center;
 }
 
-h3 {
-    margin: 35px 10px 10px;
-    color: #9aa4b6;
-}
 
 /* makes the header have set height and colour */
 header {
@@ -95,11 +91,11 @@ li {
 }
 
 a {
-    color: #9aa4b6;
+    color: #27829e;
 }
 
 a:hover {
-    color: #dce1f3;
+    color: #49a4c0;
 }
 
 /* makes "button" links buttons */
@@ -109,56 +105,35 @@ a.button {
     margin: 5px;
     border-radius: 5px;
     font-size: 1em;
-    color: #40587a;
+    color: #000000;
 }
 
 a.button:hover {
-    background-color: #D4C9CF;
+    background-color: #cccccc;
 }
 
 a:active {
-    color: #9AA4B6;
+    color: #27829e;
 }
 
 /* sets the styling for the button link for the current page*/
 #current {
-    background-color: #9AA4B6;
+    background-color: #49a4c0;
     font-size: 110%;
     color: white;
 }
-
-/*.img-link {
-    padding: 0;
-    margin: 0;
-    border-radius: 0;
-}*/
 
 nav {
     padding: 10px;
     margin-top: 15px;
     margin-bottom: 30px;
     text-align: center;
-    background-color: #dcdcda;
-}
-
-td {
-    padding: 20px 10px;
+    background-color: #dedede;
 }
 
 /* sets height and colour etc for footer */
-footer {
-    background-color: #edd9ce;
+/*footer {
+    background-color: #dedede;
     margin-top: 40px;
     height: 50px;
-}
-/*
-.justify-right {
-    text-align: right;
-    margin-right: 10px;
-}
-
-iframe {
-    border: 0;
-    margin: 0 auto;
-    display: block;
 }*/
