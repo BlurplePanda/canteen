@@ -35,7 +35,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
     <!--name/phrase search-->
     <form action='menu.php' method='post'>
         <label for='search'> Search by name </label><br>
-        <input type='text' name='search'>
+        <input type='text' name='search' id='search'>
         <input type='submit' name='submit' value='Search'>
     </form>
     <br>
