@@ -48,17 +48,18 @@ if(mysqli_connect_errno()){
             echo "Not in stock, sorry :(";
         }
         echo "</div>";
+        echo "<p><a href=".$_GET['fromurl'].">Back to previous page</a>";
+
 
     }
 
     else {
-        echo "<p>You have to choose an item!";
+        echo "<img src='images/error.png' alt='Cartoon of generic error message' class='itemimage' width='150'>";
+        echo "<p class='itemtext'>You have to choose an item!";
     }
 
 
     ?></div>
-
-    <p><a href="<?php echo $_GET['fromurl']?>">Back to previous page</a>
 
 
 </main>
