@@ -151,6 +151,26 @@ form {
     text-align: center;
 }
 
+.all-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+.item {
+    width: min-content;
+    margin: 5px;
+    text-align: center;
+    font-size: small;
+}
+
+.item img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* sets height and colour etc for footer */
 /*footer {
     background-color: #dedede;
