@@ -30,13 +30,16 @@ $specials_result = mysqli_query($con, $specials_query);
 <main>
     <h1>Specials</h1>
     <p>Huge deal: half price on the specified item on each day!
+    <div class='all-items-container'>
     <?php
     while($specials_record = mysqli_fetch_assoc($specials_result)){
+        echo "<div class='item'>";
         echo "<p>".$specials_record['weekDay'].": ";
         echo "<p><a href='item.php?id=".$specials_record['itemID']."&fromurl=".$_SERVER['REQUEST_URI']."'><img src='images/".$specials_record['itemImageName']."' alt='' class='allitemsimage'><br>".$specials_record['itemName']."</a>";
         echo "<p>Discounted price: $".sprintf("%.2f\n", $specials_record['itemPrice']*0.5)." (50% off!)";
+        echo "</div>";
     }
-    ?>
+    ?></div>
 
 </main>
 </body>

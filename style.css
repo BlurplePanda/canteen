@@ -159,7 +159,8 @@ form {
 }
 
 .item {
-    width: min-content;
+    width: fit-content;
+    max-width: 130px;
     margin: 5px;
     text-align: center;
     font-size: small;
