@@ -47,7 +47,7 @@ if(mysqli_connect_errno()){
         else{
             echo "Not in stock, sorry :(";
         }
-        echo "</div>";
+        echo "</div></div>";
         echo "<p><a href=".$_GET['fromurl'].">Back to previous page</a>";
 
 
@@ -59,7 +59,7 @@ if(mysqli_connect_errno()){
     }
 
 
-    ?></div>
+    ?>
 
 
 </main>
