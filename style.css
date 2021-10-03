@@ -138,6 +138,16 @@ nav {
     background-color: #dedede;
 }
 
+table {
+    width: 100%;
+}
+
+td {
+    width: 50%;
+    padding: 20px 10px;
+    text-align: center;
+}
+
 /* sets height and colour etc for footer */
 /*footer {
     background-color: #dedede;

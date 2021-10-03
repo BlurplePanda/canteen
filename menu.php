@@ -31,10 +31,12 @@ $all_items_result = mysqli_query($con, $all_items_query);
 <main>
     <h1>Menu</h1>
     <h2> Search </h2>
+    <table><tr><td>
     <!--name/phrase search-->
     <form action='menu.php' method='post'>
+        <label for='search'> Search by name </label><br>
         <input type='text' name='search'>
-        <input type='submit' name='submit' value='Search by name'>
+        <input type='submit' name='submit' value='Search'>
     </form>
     <br>
     <?php
@@ -54,9 +56,10 @@ $all_items_result = mysqli_query($con, $all_items_query);
             }
         }
     }
-    ?><br>
+    ?></td><td>
     <!--item type search-->
     <form name='category_form' id='category_form' method='post'>
+        <label for='category'> Search by category </label><br>
         <select id='category' name='category'>
             <!--options-->
             <option <?php if(isset($_POST['category']) && $_POST['category']=='SV'){echo "selected ";}?>value='SV'>Savoury</option>
@@ -66,7 +69,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
             <option <?php if(isset($_POST['category']) && $_POST['category']=='FT'){echo "selected ";}?>value='FT'>Fruit</option>
         </select>
 
-        <input type='submit' value='View items in category'>
+        <input type='submit' value='View category'>
     </form>
     <br>
     <?php
@@ -85,7 +88,7 @@ $all_items_result = mysqli_query($con, $all_items_query);
         }
 
     }
-    ?>
+    ?></td></tr></table>
 
     <h2> All Items</h2>
     <form name='sort_form' id='sort_form' method='post'>
