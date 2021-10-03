@@ -33,7 +33,7 @@ $specials_result = mysqli_query($con, $specials_query);
     <?php
     while($specials_record = mysqli_fetch_assoc($specials_result)){
         echo "<p>".$specials_record['weekDay'].": ";
-        echo "<p><a href='item.php?id=".$specials_record['itemID']."'><img src='images/".$specials_record['itemImageName']."' class='allitemsimage'><p>".$specials_record['itemName']."</a>";
+        echo "<p><a href='item.php?id=".$specials_record['itemID']."&fromurl=".$_SERVER['REQUEST_URI']."'><img src='images/".$specials_record['itemImageName']."' class='allitemsimage'><p>".$specials_record['itemName']."</a>";
         echo "<p>Discounted price: $".sprintf("%.2f\n", $specials_record['itemPrice']*0.5)." (50% off!)";
     }
     ?>

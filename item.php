@@ -56,7 +56,7 @@ if(mysqli_connect_errno()){
 
     ?>
 
-    <p><a href="menu.php">Back to menu</a>
+    <p><a href="<?php echo $_GET['fromurl']?>">Back to previous page</a>
 
 
 </main>
