@@ -34,7 +34,7 @@ if(mysqli_connect_errno()){
         $this_item_query = "SELECT items.*, typeName FROM items, itemtypes WHERE itemID = '".$id."' AND items.typeID = itemtypes.typeID";
         $this_item_result = mysqli_query($con, $this_item_query);
         $this_item_record = mysqli_fetch_assoc($this_item_result);
-        echo "<img src='images/".$this_item_record['itemImageName']."' class='singleitemimg' >";
+        echo "<img src='images/".$this_item_record['itemImageName']."' class='singleitemimg' alt=''>";
         echo "<p>Item Name: ".$this_item_record['itemName'];
         echo "<p>Item description: ".$this_item_record['itemDescription'];
         echo "<p>Type: ".$this_item_record['typeName'];
